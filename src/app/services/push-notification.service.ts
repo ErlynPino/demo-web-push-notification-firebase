@@ -21,6 +21,7 @@ export class PushNotificationService {
       if (permsis === "granted") {
         const tokenFirebase = await this.messagingFirebase.getToken();
         resolve(tokenFirebase);
+        console.log(tokenFirebase);
       } else {
         reject(new Error("No se otorgaron los permisos"))
       }
